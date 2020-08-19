@@ -2,12 +2,12 @@ require 'test_helper'
 
 class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   test "should get home" do
-    get static_pages_home_url
+    get root_path
     assert_response :success
   end
 
   test "should get pryvacy_policy" do
-    get static_pages_pryvacy_policy_url
+    get pryvacy_policy_path
     assert_response :success
   end
 

@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails',        '5.1.6'
+gem 'bootstrap-sass', '3.4.1'
 gem 'dotenv-rails'
 gem 'devise'
 gem 'omniauth'

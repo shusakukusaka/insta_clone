@@ -1,3 +1,7 @@
-<% provide(:title, "Home") %>
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<div class="center jumbotron">
+<h1>ようこそInsta Clone Appへ！</h1>
+
+<p>このアプリはアプリ開発練習用です</p>
+<%= link_to "Sign up", new_user_registration_path, class: "btn btn-lg btn-primary" %>
+<%= link_to "facebookでログイン",user_facebook_omniauth_authorize_path, class: "btn btn-lg btn-primary"  %>
+</div>
