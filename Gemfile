@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'rails',        '5.1.6'
+gem 'will_paginate',           '3.1.6'
+gem 'bootstrap-will_paginate', '1.0.0'
+gem 'faker-okinawa'
+gem 'faker',         '1.7.3'
 gem 'bootstrap-sass', '3.4.1'
 gem 'dotenv-rails'
 gem 'devise'

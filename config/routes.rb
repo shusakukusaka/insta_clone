@@ -5,8 +5,9 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks',
                                     sessions: "users/sessions",
-                                    passwords: "users/passwords"}
-  
+                                    passwords: "users/passwords",}
+                              
+  get '/users/index', to: 'users#index', as: :users
   get '/users/:id', to: 'users#show', as: :user
   
   
