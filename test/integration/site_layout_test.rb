@@ -8,5 +8,8 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", pryvacy_policy_path
     assert_select "a[href=?]", new_user_session_path
     assert_select "a[href=?]", user_facebook_omniauth_authorize_path
+    assert_select "a[href=?]", new_user_registration_path
+    get pryvacy_policy_path
+    assert_select "title", full_title("pryvacy policy")
   end
 end
