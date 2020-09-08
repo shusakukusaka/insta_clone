@@ -12,6 +12,12 @@ class PostsController < ApplicationController
       render 'static_pages/home'
     end
   end
+  
+  def show
+   @post = Post.find(params[:id])
+   @comments = @post.comments.paginate(page: params[:page])
+   @comment = current_user.comments.new
+  end
 
   def destroy
     @post.destroy

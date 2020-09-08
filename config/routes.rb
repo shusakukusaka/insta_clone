@@ -11,8 +11,9 @@ Rails.application.routes.draw do
   get '/users/index', to: 'users#index', as: :users
   get '/users/:id', to: 'users#show', as: :user
   
-  resources :posts,  only: [:create, :destroy]
+  resources :posts,  only: [:create, :destroy, :show]
   resources :relationships,       only: [:create, :destroy]
+  resources :comments, only: [:create, :destroy]
   
   
   
