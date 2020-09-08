@@ -6,7 +6,12 @@
       <h1>
         <%= gravatar_for @user %>
         <%= @user.name %>
-      </h1>
+        </h1>
+        <div>
+        <br><%= @user.username %>
+        <br><%= @user.website if @user.website %>
+        <br><%= @user.introduction if @user.introduction %>
+        </div>
     </section>
      <section class="stats">
       <%= render 'shared/stats' %>
