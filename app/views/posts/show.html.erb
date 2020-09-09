@@ -1,5 +1,7 @@
 <%= provide(:title, "Individual-page") %>
-
+<% if @post.title %>
+<h3>タイトル：<%= @post.title %></h3>
+<% end %>
 <%= image_tag @post.img.url if @post.img? %>
 <% if @comments.any? %>
 <h2>コメント一覧</h2>
@@ -12,7 +14,7 @@
 </div>
 <%= f.hidden_field :post_id, value: @post.id %>
 <br>
-<%= f.submit 'コメントする。', class: "btn btn-primary" %>
+<%= f.submit 'コメントする', class: "btn btn-primary" %>
 <% end %>
 
 <%= link_to "ホームへ戻る", root_path %>
