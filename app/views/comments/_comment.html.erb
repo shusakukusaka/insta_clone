@@ -1,0 +1,17 @@
+<% @comments.each do |comment| %>
+<ol class="posts">
+<li id="posts-<%= comment.post.id %>">
+        <%= link_to gravatar_for(comment.user, size: 50), comment.user %>
+        <span class="user"><%= link_to comment.user.name, comment.user %></span>
+  <span class="content">
+    <%= comment.content %>
+  </span>
+  <span class="timestamp">
+　　投稿時間 <%= time_ago_in_words(comment.created_at) %> ago.
+    <% if current_user == comment.user %>
+    <%= link_to "削除", comment, method: :delete, data: { confirm: "本当に削除しますか？" }%>
+    <% end %>
+  </span> 
+      </li>
+      </ol>
+<% end %>
